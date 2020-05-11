@@ -1,0 +1,41 @@
+NODE
+====
+
+
+O que é Node?
+    Plataforma que utiliza da V8 (Engine do Google Chrome) no lado do backend.
+    Permite tratar requisições com JS e acessar DBs.
+
+Criando o arquivo package.json para guardar as versões das pendências utilizadas
+    npm init -y
+
+Instalar EXPRESS para lidar com rotas e views
+    npm install express
+
+Executar o programa a cada atualização
+    node server.js      // nome do arquivo
+
+Para executar atualizando o código no servidor automaticamente:
+    Precisamos instalar a dependência nodemon como desenvolvimento (-D)
+        npm install -D nodemon
+    Dentro do package.json inserir o script:
+        "dev": "nodemon server.js"
+        Ficando assim:
+            "scripts": {
+                "test": "echo \"Error: no test specified\" && exit 1",
+                "dev": "nodemon server.js"
+            },
+
+Para executar os scripts:
+    npm run
+    Para executar o script dev:
+        npm run dev
+
+MONGO COM DOCKER
+    docker pull mongo
+    docker run --name mongodb -p 27017:27017 -d mongo
+    Acessar via browser, não dando mensagem de erro está funcionando o container:
+        localhost:27017
+    Instalando dependência para ORM do mongodb:
+        npm install mongoose
+    
