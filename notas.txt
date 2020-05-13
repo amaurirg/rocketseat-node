@@ -38,4 +38,14 @@ MONGO COM DOCKER
         localhost:27017
     Instalando dependência para ORM do mongodb:
         npm install mongoose
-    
+    Instalando dependência para paginação:
+        npm install mongoose-paginate
+    Instalando require-dir para não precisar fazer require em todos os models
+        npm install require-dir
+
+Para não precisar colocar require para registrar cada model, instale a dependência:
+    npm install require-dir
+
+Para ter acesso externo, fora da mesma rede:
+    Instale o CORS:
+        npm install cors
